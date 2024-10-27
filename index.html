@@ -181,6 +181,36 @@
         
 
 <div class="post">
+    <a href="/2024/10/27/index/">
+        <h2 class="post-title">示例文章</h2>
+    </a>
+    <div class="category-and-date">
+        
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2024/10/27
+        </span>
+        
+        
+    </div>
+    <div class="description">
+        <div class="content" v-pre>
+            
+            <p>这是文章的开头，展示了文章的主要观点或摘要。
+            
+        </div>
+    </div>
+    <div class="post-tags">
+        
+        
+        
+    </div>
+    <a href="/2024/10/27/index/" class="go-post">阅读全文</a>
+</div>
+
+<div class="post">
     <a href="/2024/10/27/%E5%9F%BA%E4%BA%8EHexo+Github%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">
         <h2 class="post-title">基于Hexo+Github的个人博客搭建</h2>
     </a>
@@ -203,72 +233,11 @@
 <p>拥有一个GitHub账号</p>
 <p>安装四个软件</p>
 <ul>
-<li><p>Git <a target="_blank" rel="noopener" href="https://git-scm.com/download/win">https://git-scm.com/download/win</a></p>
-</li>
-<li><p>VSCode <a target="_blank" rel="noopener" href="https://code.visualstudio.com/">https://code.visualstudio.com/</a></p>
-</li>
-<li><p>Typora  <a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_61621323/article/details/141036982">Typora 免费安装教程（已支持最新版 1.9.5）_typora免费安装-CSDN博客</a></p>
-</li>
-<li><p>Node.JS (<a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_45754463/article/details/135279187">https://blog.csdn.net/weixin_45754463/article/details/135279187</a>)</p>
-</li>
+<li>Git <a target="_blank" rel="noopener" href="https://git-scm.com/download/win">https://git-scm.com/download/win</a></li>
+<li>VSCode <a target="_blank" rel="noopener" href="https://code.visualstudio.com/">https://code.visualstudio.com/</a></li>
+<li>Typora  <a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_61621323/article/details/141036982">Typora 免费安装教程（已支持最新版 1.9.5）_typora免费安装-CSDN博客</a></li>
+<li>Node.JS (<a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_45754463/article/details/135279187">https://blog.csdn.net/weixin_45754463/article/details/135279187</a>)</li>
 </ul>
-<p>创建SSH私钥</p>
-<p>作用：通过git连接GitHub</p>
-<p>注意事项：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git config --global user.name &quot;你的Github用户名&quot;</span><br><span class="line">git config --global user.email &quot;你的邮箱&quot;</span><br></pre></td></tr></table></figure>
-
-<p>你的用户名和邮箱需要以字符串的形式出现</p>
-<p>检测：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git config --global --get user.email  </span><br><span class="line">git config --global --get user.name</span><br></pre></td></tr></table></figure>
-
-<p>这会显示你刚刚设置的电子邮件的地址和用户名</p>
-<h3 id="安装Hexo（需要提前安装Node-JS）"><a href="#安装Hexo（需要提前安装Node-JS）" class="headerlink" title="安装Hexo（需要提前安装Node.JS）"></a>安装Hexo（需要提前安装Node.JS）</h3><p>注意事项：</p>
-<p>当出现，</p>
-<p>npm : 无法将“npm”项识别为 cmdlet、函数、脚本文件或可运行程序的名称。请检查名称的拼写，如果包括路径，请确保路径正确</p>
-<p>表明——npm没有被设置到环境变量里，请仔细检查环境变量</p>
-<p>命令行输入：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm list -g --depth=0</span><br></pre></td></tr></table></figure>
-
-<p>这将显示全局安装的所有 npm 包及其路径</p>
-<h4 id="初始化hexo"><a href="#初始化hexo" class="headerlink" title="初始化hexo"></a>初始化hexo</h4><h4 id="运行博客"><a href="#运行博客" class="headerlink" title="运行博客"></a>运行博客</h4><p>hexo : 无法加载文件 D:\Professional_Software\nodejs\node_cache\hexo.ps1，因为在此系统上禁止运行脚本</p>
-<p>解释：这个错误信息表明 PowerShell 阻止了脚本的执行，因为它的执行策略不允许运行未签名的脚本。PowerShell 的执行策略（Execution Policies）是一种安全机制，用来控制可以在系统上运行的 PowerShell 脚本</p>
-<p>检查当前的执行策略</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Get-ExecutionPolicy</span><br></pre></td></tr></table></figure>
-
-<p>选择只更改当前用户的执行策略</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Set-ExecutionPolicy RemoteSigned -Scope CurrentUser</span><br></pre></td></tr></table></figure>
-
-<p>确认更改</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Get-ExecutionPolicy</span><br></pre></td></tr></table></figure>
-
-<p>Hexo常用命令</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo clean //清除hexo缓存</span><br><span class="line">hexo g     //重新生成hexo</span><br><span class="line">hexo s     //运行本地服务器</span><br><span class="line">hexo d     //将hexo推送到设置好的服务器上</span><br><span class="line">hexo new   xxx //新建博文</span><br><span class="line">hexo new page xxx //新建页面</span><br></pre></td></tr></table></figure>
-
-<h3 id="推送hexo到github-io上"><a href="#推送hexo到github-io上" class="headerlink" title="推送hexo到github.io上"></a>推送hexo到github.io上</h3><p>在本地博客中找到<code>_config.yaml</code>找到deploy部分</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># Deployment</span><br><span class="line">## Docs: https://hexo.io/docs/one-command-deployment</span><br><span class="line">deploy:</span><br><span class="line">  type: &#x27;git&#x27;</span><br><span class="line">  repo: https://github.com/gitsirfhsakjhfaks/gitsirfhsakjhfaks.github.io.git</span><br><span class="line">  branch: main</span><br></pre></td></tr></table></figure>
-
-<p>第一个“gitsirfhsakjhfaks”是用户名</p>
-<p>第二个“gitsirfhsakjhfaks.github.io”是仓库名</p>
-<p>这里注意创建仓库时一定要设置成“xx.github.io”这样的名字</p>
-<p>（另外：YAML 文件中的缩进非常重要）</p>
-<p>这样，你就可以通过(<a target="_blank" rel="noopener" href="https://gitsirfhsakjhfaks.github.io/)%E6%9D%A5%E8%AE%BF%E9%97%AE%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2">https://gitsirfhsakjhfaks.github.io/)来访问自己的博客</a></p>
-<p>即 <code>http://your-username.github.io</code></p>
-<p>线上图片不显示的问题</p>
-<p>安装插件hexo-asset-img：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install hexo-asset-img --save</span><br></pre></td></tr></table></figure>
-
-<p>然后再重新</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br><span class="line"></span><br><span class="line">hexo d</span><br><span class="line"></span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>
-
-
-
-<p>执行 hexo d 时出现的网络问题</p>
-<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_43546721/article/details/139506583">完美解决 git 报错 “fatal: unable to access ‘https://github.com/.../.git‘: Recv failure Connection was rese-CSDN博客</a></p>
-<p>其他参考文章：</p>
-<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_43639180/article/details/126502168">【完美解决】使用git时候出现error setting certificate verify locations: CAfile:问题_error setting certificate file-CSDN博客</a></p>
-<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/2201_75288693/article/details/138519863">保姆级教学 基于Hexo搭建个人网站（Github）-CSDN博客</a></p>
-<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/clearloe/article/details/139879493">Hexo 博客搭建并部署到 GitHub Pages(2024最新详细版)_github pages上部署hexo-CSDN博客</a></p>
-
             
         </div>
     </div>
@@ -282,7 +251,7 @@
         
         <span class="tag">
             
-            <a href="/tags/%E5%AD%A6%E4%B9%A0/" style="color: #00a596">学习</a>
+            <a href="/tags/%E5%AD%A6%E4%B9%A0/" style="color: #ffa2c4">学习</a>
         </span>
         
     </div>

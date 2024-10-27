@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-    <title>Archives | 欢迎</title>
+    <title>示例文章 | 欢迎</title>
     <meta name="author" content="Sun Yi" />
     <meta name="description" content="This is SunYi & blog" />
     <meta name="keywords" content="" />
@@ -37,6 +37,10 @@
 
 
 <script src="/js/lib/preview.js"></script>
+
+
+
+
 
 
 
@@ -150,69 +154,33 @@
 </transition>
 
         <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
-            
-<div id="archives">
-    
-    <div id="timeline-wrap" ref="timeline">
+            <div class="article">
+    <div>
+        <h1>示例文章</h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2024/10/27
+        </span>
         
-        <div class="timeline" data-title="你好hexo">
-            <div class="timeline-tail"></div>
-            <div class="timeline-content">
-                <div class="item-time">2024/10/27</div>
-                <a href="/2024/10/27/%E4%BD%A0%E5%A5%BDHexo/">
-                    <h3>你好Hexo</h3>
-                </a>
-                <div class="info">
-                    
-                    
-                </div>
-            </div>
-        </div>
-        
-        <div class="timeline" data-title="基于hexo+github的个人博客搭建">
-            <div class="timeline-tail"></div>
-            <div class="timeline-content">
-                <div class="item-time">2024/10/27</div>
-                <a href="/2024/10/27/%E5%9F%BA%E4%BA%8EHexo+Github%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">
-                    <h3>基于Hexo+Github的个人博客搭建</h3>
-                </a>
-                <div class="info">
-                    
-                    
-                    <span class="tags">
-                        <span class="icon">
-                            <i class="fa-solid fa-tags fa-fw"></i>
-                        </span>
-                        
-                        
-                        <span class="tag">
-                            
-                            <a href="/tags/%E5%AD%A6%E4%B9%A0/" style="color: #00a596">
-                                学习
-                            </a>
-                        </span>
-                        
-                    </span>
-                    
-                </div>
-            </div>
-        </div>
-        
-        <div class="timeline" data-title="示例文章">
-            <div class="timeline-tail"></div>
-            <div class="timeline-content">
-                <div class="item-time">2024/10/27</div>
-                <a href="/2024/10/27/index/">
-                    <h3>示例文章</h3>
-                </a>
-                <div class="info">
-                    
-                    
-                </div>
-            </div>
-        </div>
         
     </div>
+    
+    <div class="content" v-pre>
+        <p>这是文章的开头，展示了文章的主要观点或摘要。<span id="more"></span>这部分内容在初次显示时会被隐藏，需要点击“阅读更多”才能查看。</p>
+<p>这里是文章的剩余部分，包含更多的细节和信息。</p>
+
+    </div>
+    
+    
+    
+    
+    
+    
+    
 </div>
 
             <footer id="footer">
@@ -243,6 +211,12 @@
         
     </div>
     <script src="/js/main.js"></script>
+    
+    
+
+
+
+
     
 </body>
 </html>
