@@ -50,16 +50,24 @@
         pre {
           white-space: pre-wrap; /* 保持空白符序列，但是会在必要时进行换行 */
           overflow-x: auto;    /* 水平方向上的内容超出时显示滚动条 */
-          max-width: 500px;
+          font-size: 14px; /* 默认字体大小 */
+        }
+
+        /* 桌面视图的样式 */
+        @media screen and (min-width: 601px) {
+          pre {
+            max-width: 450px; /* 设置最大宽度为450px */
+            font-size: 16px; /* 可以增大字体大小以适应桌面屏幕 */
+          }
         }
 
         /* 小屏幕设备（如手机）的样式 */
-@media screen and (max-width: 600px) {
-  pre {
-    max-width: 100%; /* 设置最大宽度为100%，以适应小屏幕 */
-    font-size: 14px; /* 可以减小字体大小以适应屏幕 */
-  }
-}
+        @media screen and (max-width: 600px) {
+          pre {
+            max-width: 100%; /* 设置最大宽度为100%，以适应小屏幕 */
+            font-size: 14px; /* 可以减小字体大小以适应屏幕 */
+          }
+        }
     </style>
 
     
@@ -206,7 +214,7 @@
                         
                         <span class="tag">
                             
-                            <a href="/tags/%E5%AD%A6%E4%B9%A0/" style="color: #00a596">
+                            <a href="/tags/%E5%AD%A6%E4%B9%A0/" style="color: #ff7d73">
                                 学习
                             </a>
                         </span>
