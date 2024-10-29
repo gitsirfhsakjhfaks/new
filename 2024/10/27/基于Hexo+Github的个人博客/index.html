@@ -241,41 +241,47 @@ pre {
 <p>创建SSH私钥</p>
 <p>作用：通过git连接GitHub</p>
 <p>注意事项：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git config --global user.name &quot;你的Github用户名&quot;&lt;br/&gt;</span><br><span class="line">git config --global user.email &quot;你的邮箱&quot;</span><br></pre></td></tr></table></figure>
-
-
-
+<pre><code>git config --global user.name &quot;你的Github用户名&quot;&lt;br/&gt;
+git config --global user.email &quot;你的邮箱&quot;
+</code></pre>
 <p>你的用户名和邮箱需要以字符串的形式出现</p>
 <p>检测：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git config --global --get user.email &lt;br/&gt;</span><br><span class="line">git config --global --get user.name</span><br></pre></td></tr></table></figure>
-
-
-
+<pre><code>git config --global --get user.email &lt;br/&gt;
+git config --global --get user.name
+</code></pre>
 <p>这会显示你刚刚设置的电子邮件的地址和用户名</p>
 <h3 id="安装Hexo（需要提前安装Node-JS）"><a href="#安装Hexo（需要提前安装Node-JS）" class="headerlink" title="安装Hexo（需要提前安装Node.JS）"></a>安装Hexo（需要提前安装Node.JS）</h3><p>注意事项：</p>
 <p>当出现，</p>
 <p>npm : 无法将“npm”项识别为 cmdlet、函数、脚本文件或可运行程序的名称。请检查名称的拼写，如果包括路径，请确保路径正确</p>
 <p>表明——npm没有被设置到环境变量里，请仔细检查环境变量</p>
 <p>命令行输入：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm list -g --depth=0</span><br></pre></td></tr></table></figure>
-
+<pre><code>npm list -g --depth=0
+</code></pre>
 <p>这将显示全局安装的所有 npm 包及其路径</p>
 <h4 id="初始化hexo"><a href="#初始化hexo" class="headerlink" title="初始化hexo"></a>初始化hexo</h4><h4 id="运行博客"><a href="#运行博客" class="headerlink" title="运行博客"></a>运行博客</h4><p>hexo : 无法加载文件 D:\Professional_Software\nodejs\node_cache\hexo.ps1，因为在此系统上禁止运行脚本</p>
 <p>解释：这个错误信息表明 PowerShell 阻止了脚本的执行，因为它的执行策略不允许运行未签名的脚本。PowerShell 的执行策略（Execution Policies）是一种安全机制，用来控制可以在系统上运行的 PowerShell 脚本</p>
 <p>检查当前的执行策略</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Get-ExecutionPolicy</span><br></pre></td></tr></table></figure>
-
+<pre><code>Get-ExecutionPolicy
+</code></pre>
 <p>选择只更改当前用户的执行策略</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Set-ExecutionPolicy RemoteSigned -Scope CurrentUser</span><br></pre></td></tr></table></figure>
-
+<pre><code>Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+</code></pre>
 <p>确认更改</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Get-ExecutionPolicy</span><br></pre></td></tr></table></figure>
-
+<pre><code>Get-ExecutionPolicy
+</code></pre>
 <p>Hexo常用命令</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo clean  //清除hexo缓存 &lt;br/&gt;</span><br><span class="line"></span><br><span class="line">hexo g      //重新生成hexo &lt;br/&gt;</span><br><span class="line"></span><br><span class="line">hexo s     //运行本地服务器 &lt;br/&gt;</span><br><span class="line"></span><br><span class="line">hexo d     //将hexo推送到设置好的服务器上 &lt;br/&gt;</span><br><span class="line"></span><br><span class="line">hexo new   xxx //新建博文 &lt;br/&gt;</span><br><span class="line"></span><br><span class="line">hexo new page xxx //新建页面</span><br></pre></td></tr></table></figure>
+<pre><code> hexo clean  //清除hexo缓存 &lt;br/&gt;
 
+ hexo g      //重新生成hexo &lt;br/&gt;
 
+ hexo s     //运行本地服务器 &lt;br/&gt;
 
+ hexo d     //将hexo推送到设置好的服务器上 &lt;br/&gt;
+
+ hexo new   xxx //新建博文 &lt;br/&gt;
+
+ hexo new page xxx //新建页面
+</code></pre>
 <h3 id="推送hexo到github-io上"><a href="#推送hexo到github-io上" class="headerlink" title="推送hexo到github.io上"></a>推送hexo到github.io上</h3><p>在本地博客中找到<code>_config.yaml</code>找到deploy部分</p>
 <p>deploy:<br>  type: ‘git’<br>  repo: <a target="_blank" rel="noopener" href="https://github.com/gitsirfhsakjhfaks/gitsirfhsakjhfaks.github.io.git">https://github.com/gitsirfhsakjhfaks/gitsirfhsakjhfaks.github.io.git</a><br>  branch: main</p>
 <p>第一个“gitsirfhsakjhfaks”是用户名</p>
@@ -286,13 +292,15 @@ pre {
 <p>即 <code>http://your-username.github.io</code></p>
 <p>线上图片不显示的问题</p>
 <p>安装插件hexo-asset-img：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install hexo-asset-img --save</span><br></pre></td></tr></table></figure>
-
+<pre><code>npm install hexo-asset-img --save
+</code></pre>
 <p>然后再重新</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo clean &lt;br/&gt;</span><br><span class="line"></span><br><span class="line">hexo d &lt;br/&gt;</span><br><span class="line"></span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>
+<pre><code>hexo clean &lt;br/&gt;
 
+hexo d &lt;br/&gt;
 
-
+hexo s
+</code></pre>
 <p>执行 hexo d 时出现的网络问题</p>
 <p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_43546721/article/details/139506583">完美解决 git 报错 “fatal: unable to access ‘https://github.com/.../.git‘: Recv failure Connection was rese-CSDN博客</a></p>
 <p>其他参考文章：</p>
