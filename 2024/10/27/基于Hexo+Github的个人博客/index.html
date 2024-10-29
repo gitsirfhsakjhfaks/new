@@ -202,7 +202,7 @@
             
             <span class="tag">
                 
-                <a href="/tags/%E5%AD%A6%E4%B9%A0/" style="color: #ff7d73">
+                <a href="/tags/%E5%AD%A6%E4%B9%A0/" style="color: #03a9f4">
                     学习
                 </a>
             </span>
@@ -241,12 +241,12 @@ pre {
 <p>创建SSH私钥</p>
 <p>作用：通过git连接GitHub</p>
 <p>注意事项：</p>
-<pre><code>git config --global user.name &quot;你的Github用户名&quot;&lt;br/&gt;
+<pre><code class="bash">git config --global user.name &quot;你的Github用户名&quot;&lt;br/&gt;
 git config --global user.email &quot;你的邮箱&quot;
 </code></pre>
 <p>你的用户名和邮箱需要以字符串的形式出现</p>
 <p>检测：</p>
-<pre><code>git config --global --get user.email &lt;br/&gt;
+<pre><code class="bash">git config --global --get user.email &lt;br/&gt;
 git config --global --get user.name
 </code></pre>
 <p>这会显示你刚刚设置的电子邮件的地址和用户名</p>
@@ -255,22 +255,22 @@ git config --global --get user.name
 <p>npm : 无法将“npm”项识别为 cmdlet、函数、脚本文件或可运行程序的名称。请检查名称的拼写，如果包括路径，请确保路径正确</p>
 <p>表明——npm没有被设置到环境变量里，请仔细检查环境变量</p>
 <p>命令行输入：</p>
-<pre><code>npm list -g --depth=0
+<pre><code class="bash">npm list -g --depth=0
 </code></pre>
 <p>这将显示全局安装的所有 npm 包及其路径</p>
 <h4 id="初始化hexo"><a href="#初始化hexo" class="headerlink" title="初始化hexo"></a>初始化hexo</h4><h4 id="运行博客"><a href="#运行博客" class="headerlink" title="运行博客"></a>运行博客</h4><p>hexo : 无法加载文件 D:\Professional_Software\nodejs\node_cache\hexo.ps1，因为在此系统上禁止运行脚本</p>
 <p>解释：这个错误信息表明 PowerShell 阻止了脚本的执行，因为它的执行策略不允许运行未签名的脚本。PowerShell 的执行策略（Execution Policies）是一种安全机制，用来控制可以在系统上运行的 PowerShell 脚本</p>
 <p>检查当前的执行策略</p>
-<pre><code>Get-ExecutionPolicy
+<pre><code class="bash">Get-ExecutionPolicy
 </code></pre>
 <p>选择只更改当前用户的执行策略</p>
-<pre><code>Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+<pre><code class="bash">Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
 </code></pre>
 <p>确认更改</p>
-<pre><code>Get-ExecutionPolicy
+<pre><code class="bash">Get-ExecutionPolicy
 </code></pre>
 <p>Hexo常用命令</p>
-<pre><code> hexo clean  //清除hexo缓存 &lt;br/&gt;
+<pre><code class="bash"> hexo clean  //清除hexo缓存 &lt;br/&gt;
 
  hexo g      //重新生成hexo &lt;br/&gt;
 
@@ -292,10 +292,10 @@ git config --global --get user.name
 <p>即 <code>http://your-username.github.io</code></p>
 <p>线上图片不显示的问题</p>
 <p>安装插件hexo-asset-img：</p>
-<pre><code>npm install hexo-asset-img --save
+<pre><code class="bash">npm install hexo-asset-img --save
 </code></pre>
 <p>然后再重新</p>
-<pre><code>hexo clean &lt;br/&gt;
+<pre><code class="bash">hexo clean &lt;br/&gt;
 
 hexo d &lt;br/&gt;
 
